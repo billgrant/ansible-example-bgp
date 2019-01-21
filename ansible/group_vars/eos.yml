@@ -1,0 +1,10 @@
+# EOS global parameters
+
+---
+
+ansible_connection: httpapi
+ansible_network_os: eos
+ansible_user: admin
+ansible_ssh_pass: admin
+ansible_become: yes
+ansible_become_method: enable

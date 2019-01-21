@@ -1,0 +1,13 @@
+# sw2 device specfic parameters
+
+---
+
+interfaces:
+  - name: Ethernet2/1
+    ipv4: 192.168.12.2/24
+    mode: layer3
+    admin_state: up
+  - name: Loopback0
+    ipv4: 2.2.2.2/32
+    mode: layer3
+    admin_state: up

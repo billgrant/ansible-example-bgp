@@ -1,0 +1,17 @@
+hostname SW2
+ip name-server 8.8.8.8
+ip name-server 8.8.4.4
+ip domain-name billgrant.io
+!
+username admin role network-admin password admin
+!
+interface mgmt0
+  vrf member management
+  ip address 192.0.2.253/24
+!
+vrf context management
+  ip route 0.0.0.0/0 192.0.2.1
+!
+feature lldp
+feature nxapi
+nxapi sandbox
