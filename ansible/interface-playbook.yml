@@ -64,3 +64,4 @@
       - name: Save nxos configuration
         nxos_config:
           save_when: modified
+        changed_when: false
