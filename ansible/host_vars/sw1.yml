@@ -12,3 +12,12 @@ interfaces:
     ipv4: 1.1.1.1/32
     enabled: True
     state: up
+
+bgp:
+  asn: 1
+  routerid: 1.1.1.1
+  neighbor:
+    - address: 192.168.12.2
+      remote-as: 2
+  network:
+    - address: 1.1.1.1/32
