@@ -11,3 +11,14 @@ interfaces:
     ipv4: 2.2.2.2/32
     mode: layer3
     admin_state: up
+
+bgp:
+  asn: 2
+  routerid: 2.2.2.2
+  neighbors:
+    - address: 192.168.12.1
+      remoteas: 1
+      addrfamily: ipv4 unicast
+  networks:
+    - address: 2.2.2.2/32
+      addrfamily: ipv4 unicast

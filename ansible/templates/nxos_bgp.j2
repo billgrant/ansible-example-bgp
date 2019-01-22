@@ -1,0 +1,10 @@
+license grace-period
+feature bgp
+!
+router bgp {{ bgp.asn }}
+  router-id 2.2.2.2
+  address-family ipv4 unicast
+    network 2.2.2.2/32
+  neighbor 192.168.12.1
+    remote-as 1
+    address-family ipv4 unicast
