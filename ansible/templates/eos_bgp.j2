@@ -7,4 +7,4 @@ router bgp {{ bgp.asn }}
    {% endfor -%}
    {% for network in bgp.networks -%}
    network {{ network.address }}
-   {% endfor -%}}
+   {% endfor -%}
