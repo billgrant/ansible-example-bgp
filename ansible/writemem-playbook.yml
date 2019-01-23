@@ -1,0 +1,20 @@
+---
+
+  - hosts: eos
+    gather_facts: no
+
+    tasks:
+
+      - name: Save eos configuration
+        eos_config:
+          save_when: modified
+
+  - hosts: nxos
+    gather_facts: no
+
+    tasks:
+      
+      - name: Save nxos configuration
+        nxos_config:
+          save_when: modified
+        changed_when: false

@@ -1,0 +1,23 @@
+# Playbook that backs up Switch configurations
+
+---
+
+  - hosts: eos
+    gather_facts: no
+
+    tasks:
+
+      - name: Backup eos device
+        eos_config:
+          backup: yes
+        register: "{{ inventory_hostname }}"
+
+  - hosts: nxos
+    gather_facts: no
+
+    tasks:
+
+      - name: Backup nxos device
+        nxos_config:
+          backup: yes
+        register: "{{ inventory_hostname }}" 

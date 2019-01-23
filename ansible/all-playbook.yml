@@ -1,0 +1,6 @@
+---
+
+  - import_playbook: backup-playbook.yml
+  - import_playbook: interface-playbook.yml
+  - import_playbook: bgp-playbook.yml
+  - import_playbook: writemem-playbook.yml

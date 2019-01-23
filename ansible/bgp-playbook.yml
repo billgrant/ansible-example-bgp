@@ -1,0 +1,42 @@
+# Playbook to set BGP configuration
+
+---
+  - hosts: eos:nxos
+    gather_facts: no
+    
+    tasks:
+
+      - name: Create configuration templates
+        template:
+          src: "templates/{{ ansible_network_os }}_bgp.j2"
+          dest: "configs/{{ inventory_hostname }}.config"
+  
+  - hosts: eos
+    gather_facts: no
+
+    tasks:
+
+      - name: load BGP config eos
+        eos_config:
+          src: "configs/{{ inventory_hostname }}.config"
+        register: updates
+
+      - name: debug updates
+        debug:
+          msg: "{{ updates.updates }}"
+          
+  - hosts: nxos
+    gather_facts: no
+
+    tasks:
+
+      - name: load BGP config nxos
+        nxos_config:
+          src: "configs/{{ inventory_hostname }}.config"
+        register: updates
+
+      - name: debug updates
+        debug:
+          msg: "{{ updates.updates }}"
+  
+
