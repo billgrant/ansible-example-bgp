@@ -1,4 +1,4 @@
-# Ansible for Network Configuration
+# Ansible for BGP Configuration
 
-Source code for the blog post [here](https://billgrant.io/post/2019-01-21-anisblenet-1/).
+Source code for the blog post [here](https://billgrant.io/post/2019-01-23-anisblenet-2/).
 
